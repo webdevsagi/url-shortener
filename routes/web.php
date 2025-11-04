@@ -14,7 +14,7 @@ Route::get("/login", [LoginController::class, "showLoginForm"])->name("login");
 Route::post("/login", [LoginController::class, "login"]);
 Route::post("/logout", [LoginController::class, "logout"])->name("logout");
 
-// נתיבי אדמין
+
 Route::middleware(["admin"])->prefix("admin")->name("admin.")->group(function () {
     Route::get("/links", [AdminLinkController::class, "index"])->name("links.index");
 });

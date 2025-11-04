@@ -38,6 +38,7 @@ class Link extends Model
             }
         }
 
+        // If we couldn't generate a unique slug, try with a longer length
         return self::generateUniqueSlug($length + 1);
     }
 }
